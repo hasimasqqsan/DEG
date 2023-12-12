@@ -1,0 +1,22 @@
+pygame.mixer.music
+ストリーミング再生を操作するpygameモジュールです
+
+pygame.mixer.music.load - 再生する音楽ファイルを読み込みます。
+pygame.mixer.music.play - 音楽のストリーミング再生を開始します。
+pygame.mixer.music.rewind - 音楽を最初から再生します。
+pygame.mixer.music.stop - 音楽の再生を終了します。
+pygame.mixer.music.pause - 音楽の再生を一時停止します。
+pygame.mixer.music.unpause - 停止した音楽を再開させます。
+pygame.mixer.music.fadeout - 再生中の音楽の音を徐々に小さくしていった上で終了させます。
+pygame.mixer.music.set_volume - 音楽のボリュームを設定します。
+pygame.mixer.music.get_volume - 音楽のボリュームを取得します。
+pygame.mixer.music.get_busy - 音楽が再生中かどうかを確認します。
+pygame.mixer.music.get_pos - 音楽の再生時間を取得します。
+pygame.mixer.music.queue - 現在再生中の音楽が終了した後に再生されるように、音楽ファイルの再生準備をします。
+pygame.mixer.music.set_endevent - 音楽の再生が終了した時に、指定したイベントを発生させます。
+pygame.mixer.music.get_endevent - 音楽の再生が終了した時に、発生するイベントを取得します。
+このmusicモジュールはpygame.mixerと密接につながっています。musicモジュールを使用することでサウンドミキサーでの音楽の再生を制御できます。
+
+音楽再生と通常の音声再生の違いについてですが、音楽はストリーミング再生なので再生前に一度にファイル全てを読み込むことはありません。 このミキサーでは一度に一つの音楽しか再生することができません。
+
+MP3ファイルのサポートには制限があるので気をつけてください。使用環境によっては、サポートされていないファイル形式を使用するとプログラムがクラッシュする可能性もあります(例えば、Debian Linuxなど)。MP3ファイルがサポートされていない環境では、代わりにOGGファイルの使用を検討してください。
